@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-12 15:58-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: models/attribute_land.py:14 models/land.py:36
+msgid "Land"
+msgstr ""
+
+#: models/attribute_land.py:16 models/attribute_nft.py:16 models/land.py:23
+#: models/nft.py:23
+msgid "Name"
+msgstr ""
+
+#: models/attribute_land.py:17 models/attribute_nft.py:17
+msgid "Value"
+msgstr ""
+
+#: models/attribute_land.py:22
+msgid "Attribute Land"
+msgstr ""
+
+#: models/attribute_land.py:23
+msgid "Attributes Lands"
+msgstr ""
+
+#: models/attribute_nft.py:14 models/nft.py:38
+msgid "Nft"
+msgstr ""
+
+#: models/attribute_nft.py:22
+msgid "Attribute Nft"
+msgstr ""
+
+#: models/attribute_nft.py:23
+msgid "Attributes Nft"
+msgstr ""
+
+#: models/land.py:22 models/nft.py:22
+msgid "Cus id"
+msgstr ""
+
+#: models/land.py:24 models/nft.py:24
+msgid "Description"
+msgstr ""
+
+#: models/land.py:26 models/nft.py:26
+msgid "Image"
+msgstr ""
+
+#: models/land.py:28 models/nft.py:30
+msgid "Attributes"
+msgstr ""
+
+#: models/land.py:37
+msgid "Lands"
+msgstr ""
+
+#: models/nft.py:28
+msgid "Level"
+msgstr ""
+
+#: models/nft.py:29
+msgid "Update level"
+msgstr ""
+
+#: models/nft.py:39
+msgid "Nfts"
+msgstr ""
+
+#: viewset/attribute_land_viewset.py:56 viewset/attribute_viewset.py:56
+msgid "List of all Attributes registered in the system."
+msgstr ""
+
+#: viewset/attribute_land_viewset.py:57 viewset/attribute_viewset.py:57
+msgid "Create a Attributes data."
+msgstr ""
+
+#: viewset/attribute_land_viewset.py:58 viewset/attribute_viewset.py:58
+msgid "Returns the information of a specific Attributes."
+msgstr ""
+
+#: viewset/attribute_land_viewset.py:59 viewset/attribute_viewset.py:59
+msgid "Update a Attributes data."
+msgstr ""
+
+#: viewset/attribute_land_viewset.py:60 viewset/attribute_viewset.py:60
+msgid "Partially update a Attributes data."
+msgstr ""
+
+#: viewset/attribute_land_viewset.py:61 viewset/attribute_viewset.py:61
+msgid "Destroy a Attributes data."
+msgstr ""
+
+#: viewset/land_viewset.py:57
+msgid "List of all Lands registered in the system."
+msgstr ""
+
+#: viewset/land_viewset.py:58
+msgid "Create a Lands data."
+msgstr ""
+
+#: viewset/land_viewset.py:59
+msgid "Returns the information of a specific Lands."
+msgstr ""
+
+#: viewset/land_viewset.py:60
+msgid "Update a Lands data."
+msgstr ""
+
+#: viewset/land_viewset.py:61
+msgid "Partially update a Lands data."
+msgstr ""
+
+#: viewset/land_viewset.py:62
+msgid "Destroy a Lands data."
+msgstr ""
+
+#: viewset/nft_viewset.py:59
+msgid "List of all Nfts registered in the system."
+msgstr ""
+
+#: viewset/nft_viewset.py:60
+msgid "Create a Nfts data."
+msgstr ""
+
+#: viewset/nft_viewset.py:61
+msgid "Returns the information of a specific Nfts."
+msgstr ""
+
+#: viewset/nft_viewset.py:62
+msgid "Update a Nfts data."
+msgstr ""
+
+#: viewset/nft_viewset.py:63
+msgid "Partially update a Nfts data."
+msgstr ""
+
+#: viewset/nft_viewset.py:64
+msgid "Destroy a Nfts data."
+msgstr ""

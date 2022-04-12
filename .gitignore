@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+env
+.idea/.gitignore
+.idea/inspectionProfiles/
+.idea/loducode_utils.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.DS_Store
+build/
+dist/
+loducode_web3.egg-info/
+manage.py
