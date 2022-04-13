@@ -5,8 +5,8 @@ from rest_framework import viewsets
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.permissions import IsAuthenticated, AllowAny
 
-from lands.models.attribute_land import AttributeLand
-from lands.serializers.attribute_serializer import AttributeLandSerializer, AttributeLandListSerializer, \
+from loducode_web3.models.attribute_land import AttributeLand
+from loducode_web3.serializers.attribute_serializer import AttributeLandSerializer, AttributeLandListSerializer, \
     AttributeLandCreateSerializer
 from loducode_web3.utils import ActionBasedPermission
 

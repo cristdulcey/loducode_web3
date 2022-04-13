@@ -5,8 +5,8 @@ from rest_framework import viewsets
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.permissions import IsAuthenticated, AllowAny
 
-from nfts.models.attribute_nft import AttributeNft
-from nfts.serializers.attribute_nft_serializer import AttributeNftSerializer, AttributeNftListSerializer, \
+from loducode_web3.models.attribute_nft import AttributeNft
+from loducode_web3.serializers.attribute_nft_serializer import AttributeNftSerializer, AttributeNftListSerializer, \
     AttributeNftCreateSerializer
 from loducode_web3.utils import ActionBasedPermission
 

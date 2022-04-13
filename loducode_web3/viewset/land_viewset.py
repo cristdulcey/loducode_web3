@@ -5,8 +5,8 @@ from rest_framework import viewsets
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.permissions import IsAuthenticated, AllowAny
 
-from lands.models.land import Land
-from lands.serializers.land_serializer import LandSerializer, LandCreateSerializer, LandListSerializer
+from loducode_web3.models.land import Land
+from loducode_web3.serializers.land_serializer import LandSerializer, LandCreateSerializer, LandListSerializer
 from loducode_web3.utils import ActionBasedPermission
 
 class LandViewSet(viewsets.ModelViewSet):  # pylint: disable=R0901 C0112
