@@ -9,3 +9,4 @@ include loducode_web3/managers/*
 include loducode_web3/migrations/*
 include loducode_web3/serializers/*
 include loducode_web3/viewset/*
+include loducode_web3/helpers/*

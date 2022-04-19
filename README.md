@@ -4,7 +4,7 @@ Basic components for the development of loducode s.a.s.
 
 ### install
 
-`pip install loducode_web3==0.0.2`
+`pip install loducode_web3==0.0.3`
 
 ## functionalities
 
@@ -32,7 +32,7 @@ Basic components for the development of loducode s.a.s.
 ## Commands
 
 - python setup.py sdist bdist_wheel
-- twine upload --repository pypi dist/loducode_web3-0.0.2*
+- twine upload --repository pypi dist/loducode_web3-0.0.3*
 
 entrar a la carpeta loducode_web3 y correr
 - django-admin makemessages
