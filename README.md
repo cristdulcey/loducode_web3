@@ -17,6 +17,9 @@ Basic components for the development of loducode s.a.s.
 - python setup.py sdist bdist_wheel
 - twine upload --repository pypi dist/loducode_web3-0.1.1*
 
+## push
+git tag -a 0.1.1 -m "annotation for this release"
+
 entrar a la carpeta loducode_web3 y correr
 - django-admin makemessages
 - django-admin compilemessages
