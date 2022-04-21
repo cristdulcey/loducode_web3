@@ -17,7 +17,6 @@ def create_path_nft(instance, filename):
 
 
 class Nft(Audit):
-    model_name = 'Nft'
 
     cus_id: int = models.BigIntegerField(verbose_name=_('Cus id'), default=12, unique=True)
     name: str = models.CharField(_('Name'), max_length=255)
@@ -35,8 +34,8 @@ class Nft(Audit):
     objects = NftManager()
 
     class Meta:
-        verbose_name = _('Nft')
-        verbose_name_plural = _('Nfts')
+        abstract = True
+        ordering = ['-created_at']
 
     def __str__(self):
         return f'{self.name}'

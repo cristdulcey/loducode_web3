@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-12 15:58-0500\n"
+"POT-Creation-Date: 2022-04-21 11:54-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,139 +18,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: models/attribute_land.py:14 models/land.py:36
-msgid "Land"
-msgstr "Land"
-
-#: models/attribute_land.py:16 models/attribute_nft.py:16 models/land.py:23
-#: models/nft.py:23
+#: models/attribute_nft.py:12 models/nft.py:22
 msgid "Name"
 msgstr "Nombre"
 
-#: models/attribute_land.py:17 models/attribute_nft.py:17
+#: models/attribute_nft.py:13
 msgid "Value"
 msgstr "Valor"
 
-#: models/attribute_land.py:22
-msgid "Attribute Land"
-msgstr "Atributo de la land"
-
-#: models/attribute_land.py:23
-msgid "Attributes Lands"
-msgstr "Atributo de las lands"
-
-#: models/attribute_nft.py:14 models/nft.py:38
-msgid "Nft"
-msgstr ""
-
-#: models/attribute_nft.py:22
-msgid "Attribute Nft"
-msgstr "Atributo del nft"
-
-#: models/attribute_nft.py:23
-msgid "Attributes Nft"
-msgstr "Atributo de los nfts"
-
-#: models/land.py:22 models/nft.py:22
+#: models/nft.py:21
 msgid "Cus id"
 msgstr ""
 
-#: models/land.py:24 models/nft.py:24
+#: models/nft.py:23
 msgid "Description"
 msgstr "Descripción"
 
-#: models/land.py:26 models/nft.py:26
+#: models/nft.py:25
 msgid "Image"
 msgstr "Imagen"
 
-#: models/land.py:28 models/nft.py:30
-msgid "Attributes"
-msgstr "Atributos"
-
-#: models/land.py:37
-msgid "Lands"
-msgstr ""
-
-#: models/nft.py:28
+#: models/nft.py:27
 msgid "Level"
 msgstr "Nivel"
 
-#: models/nft.py:29
+#: models/nft.py:28
 msgid "Update level"
 msgstr "Actualizar nivel"
 
-#: models/nft.py:39
-msgid "Nfts"
-msgstr ""
-
-#: viewset/attribute_land_viewset.py:56 viewset/attribute_viewset.py:56
-msgid "List of all Attributes registered in the system."
-msgstr "Lista de todos los Atributos registrados en el sistema."
-
-#: viewset/attribute_land_viewset.py:57 viewset/attribute_viewset.py:57
-msgid "Create a Attributes data."
-msgstr "Crear datos de Atributos."
-
-#: viewset/attribute_land_viewset.py:58 viewset/attribute_viewset.py:58
-msgid "Returns the information of a specific Attributes."
-msgstr "Devuelve la información de un Atributo específico."
-
-#: viewset/attribute_land_viewset.py:59 viewset/attribute_viewset.py:59
-msgid "Update a Attributes data."
-msgstr "Actualizar datos de Atributos."
-
-#: viewset/attribute_land_viewset.py:60 viewset/attribute_viewset.py:60
-msgid "Partially update a Attributes data."
-msgstr "Actualizar parcialmente los datos de un Atributo."
-
-#: viewset/attribute_land_viewset.py:61 viewset/attribute_viewset.py:61
-msgid "Destroy a Attributes data."
-msgstr "Destruir datos de Atributos."
-
-#: viewset/land_viewset.py:57
-msgid "List of all Lands registered in the system."
-msgstr "Lista de todos las Lands registrados en el sistema."
-
-#: viewset/land_viewset.py:58
-msgid "Create a Lands data."
-msgstr "Crear datos de Lands."
-
-#: viewset/land_viewset.py:59
-msgid "Returns the information of a specific Lands."
-msgstr "Devuelve la información de un Land específico."
-
-#: viewset/land_viewset.py:60
-msgid "Update a Lands data."
-msgstr "Actualizar los datos de Lands."
-
-#: viewset/land_viewset.py:61
-msgid "Partially update a Lands data."
-msgstr "Actualizar parcialmente los datos de Lands."
-
-#: viewset/land_viewset.py:62
-msgid "Destroy a Lands data."
-msgstr "Destruye los datos de Lands."
-
-#: viewset/nft_viewset.py:59
-msgid "List of all Nfts registered in the system."
-msgstr "Lista de todos los Nfts registrados en el sistema."
-
-#: viewset/nft_viewset.py:60
-msgid "Create a Nfts data."
-msgstr "Crear datos de Nfts."
-
-#: viewset/nft_viewset.py:61
-msgid "Returns the information of a specific Nfts."
-msgstr "Devuelve la información de un Nfts específico."
-
-#: viewset/nft_viewset.py:62
-msgid "Update a Nfts data."
-msgstr "Actualizar datos de Nfts."
-
-#: viewset/nft_viewset.py:63
-msgid "Partially update a Nfts data."
-msgstr "Actualice parcialmente los datos de Nfts."
-
-#: viewset/nft_viewset.py:64
-msgid "Destroy a Nfts data."
-msgstr "Destruye los datos de Nfts."
+#: models/nft.py:29
+msgid "Attributes"
+msgstr "Atributos"
