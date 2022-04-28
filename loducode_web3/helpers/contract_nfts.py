@@ -372,3 +372,29 @@ class ContractNft(ABC):  # pylint: disable=R0904
         except Exception as err:  # pylint: disable=W0703
             print(err)
         return response
+
+    def add_white_list(self, address: [str], address_owner: str = settings.CONTRACT_NFT_ADDRESS_OWNER,
+                       secret_owner: str = settings.CONTRACT_NFT_SECRET_OWNER):
+        web3 = Web3(Web3.HTTPProvider(self.bsc))
+        _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
+        response = {}
+        list_address = []
+        for ad in address:
+            list_address.append(web3.toChecksumAddress(ad))
+        try:
+            mints = _contract.functions.addToPresaleWhiteList(list_address).buildTransaction({
+                'chainId': self.chain_id,
+                'gas': 1728712,
+                'gasPrice': web3.eth.gas_price,
+                'from': address_owner,
+                'nonce': web3.eth.get_transaction_count(address_owner)
+            })
+            signed_txn = web3.eth.account.sign_transaction(
+                mints,
+                private_key=secret_owner)
+            web3.eth.send_raw_transaction(signed_txn.rawTransaction)
+            tx_hash = web3.toHex(web3.keccak(signed_txn.rawTransaction))
+            response = web3.eth.wait_for_transaction_receipt(tx_hash)
+        except Exception as err:  # pylint: disable=W0703
+            print(err)
+        return response
