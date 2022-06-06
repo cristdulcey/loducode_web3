@@ -27,9 +27,9 @@ class Nft(Audit):
     level: int = models.BigIntegerField(verbose_name=_('Level'), blank=True, null=True, default=1)
     update_level: dict = JSONField(verbose_name=_('Update level'), null=True, blank=True, default=dict)
     attributes: dict = JSONField(verbose_name=_('Attributes'), null=True, blank=True, default=dict)
-    cost: float = models.FloatField(verbose_name='Cost', default=0.0)
-    date_publication: date = models.DateField()
-    date_created: date = models.DateField(auto_now=True)
+    cost: float = models.FloatField(verbose_name=_('Cost'), default=0.0)
+    date_publication: date = models.DateField(verbose_name=_('date_publication'),)
+    date_created: date = models.DateField(verbose_name=_('date_created'),auto_now=True)
 
     objects = NftManager()
 
