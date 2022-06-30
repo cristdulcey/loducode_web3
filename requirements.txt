@@ -8,7 +8,6 @@ django==3.0
 django-crum==0.7.5
 django-import-export>=2.1.0
 loducode_utils==1.5.1
-psycopg2-binary==2.8.4
 # setuptools
 # wheel
 # twine
