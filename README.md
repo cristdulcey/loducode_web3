@@ -4,7 +4,7 @@ Basic components for the development of loducode s.a.s.
 
 ### install
 
-`pip install loducode_web3==0.1.4`
+`pip install loducode_web3==0.1.5`
 
 ## functionalities
 
@@ -15,14 +15,17 @@ Basic components for the development of loducode s.a.s.
 ## Commands
 
 - python setup.py sdist bdist_wheel
-- twine upload --repository pypi dist/loducode_web3-0.1.4*
+- twine upload --repository pypi dist/loducode_web3-0.1.5*
 
 ## push
-git tag -a 0.1.4 -m "annotation for this release"
+git tag -a 0.1.5 -m "annotation for this release"
 
 entrar a la carpeta loducode_web3 y correr
 - django-admin makemessages
 - django-admin compilemessages
+
+####Version 0.1.4
+- update requirements loducode utils
 
 ####Version 0.1.4
 - delete requirement sycopg2-binary==2.8.4
