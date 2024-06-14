@@ -17,15 +17,12 @@ def create_path_nft(instance, filename):
 
 
 class Nft(Audit):
-
     cus_id: int = models.BigIntegerField(verbose_name=_('Cus id'), default=12, unique=True)
     name: str = models.CharField(_('Name'), max_length=255)
     description: str = models.CharField(_('Description'), max_length=555, blank=True, null=True)
     image: str = models.FileField(
         verbose_name=_('Image'), upload_to=create_path_nft, blank=True, null=True
     )
-    level: int = models.BigIntegerField(verbose_name=_('Level'), blank=True, null=True, default=1)
-    update_level: dict = JSONField(verbose_name=_('Update level'), null=True, blank=True, default=dict)
     attributes: dict = JSONField(verbose_name=_('Attributes'), null=True, blank=True, default=dict)
     cost: float = models.FloatField(verbose_name=_('Cost'), default=0.0)
     date_publication: date = models.DateField(verbose_name=_('date_publication'),)

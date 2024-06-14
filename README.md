@@ -4,7 +4,7 @@ Basic components for the development of loducode s.a.s.
 
 ### install
 
-`pip install loducode_web3==0.1.7`
+`pip install loducode_web3==0.1.8`
 
 ## functionalities
 
@@ -15,14 +15,17 @@ Basic components for the development of loducode s.a.s.
 ## Commands
 
 - python setup.py sdist bdist_wheel
-- twine upload --repository pypi dist/loducode_web3-0.1.7*
+- twine upload --repository pypi dist/loducode_web3-0.1.8*
 
 ## push
-git tag -a 0.1.6 -m "annotation for this release"
+git tag -a 0.1.8 -m "annotation for this release"
 
 entrar a la carpeta loducode_web3 y correr
 - django-admin makemessages
 - django-admin compilemessages
+
+#### Version 0.1.8
+- delete attributes in model Nft it is not necessary
 
 #### Version 0.1.7
 - add enable_unaudited_hdwallet_features
