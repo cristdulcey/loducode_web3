@@ -7,9 +7,9 @@ from web3 import Web3
 
 class ContractNft(ABC):  # pylint: disable=R0904
 
-    def __init__(self, bsc: str = settings.CONTRACT_NFT_NET, abi: str = json.loads(settings.CONTRACT_NFT_ABI),
-                 address_contract: str = settings.CONTRACT_NFT_ADDRESS,
-                 chain_id: int = settings.CONTRACT_NFT_CHAIN_ID):
+    def __init__(self, bsc: str = "", abi: str = json.loads({}),
+                 address_contract: str = "",
+                 chain_id: int = 0):
         self.bsc = bsc
         self.abi = abi
         self.address_contract = address_contract
@@ -40,8 +40,8 @@ class ContractNft(ABC):  # pylint: disable=R0904
             print(err)
         return id_token
 
-    def mint(self, address: str, count: int = 1, address_owner: str = settings.CONTRACT_NFT_ADDRESS_OWNER,
-             secret_owner: str = settings.CONTRACT_NFT_SECRET_OWNER, gas: int = 1728712, value: str = "0.0025"):
+    def mint(self, address: str, count: int = 1, address_owner: str = "",
+             secret_owner: str = "", gas: int = 1728712, value: str = "0.0025"):
         web3 = Web3(Web3.HTTPProvider(self.bsc))
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = {}
@@ -64,8 +64,8 @@ class ContractNft(ABC):  # pylint: disable=R0904
             print(err)
         return response
 
-    def start_pre_sale(self, start=True, address_owner: str = settings.CONTRACT_NFT_ADDRESS_OWNER,
-                       secret_owner: str = settings.CONTRACT_NFT_SECRET_OWNER):
+    def start_pre_sale(self, start=True, address_owner: str = "",
+                       secret_owner: str = ""):
         web3 = Web3(Web3.HTTPProvider(self.bsc))
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = {}
@@ -96,8 +96,8 @@ class ContractNft(ABC):  # pylint: disable=R0904
             print(err)
         return response
 
-    def start_sale(self, address_owner: str = settings.CONTRACT_NFT_ADDRESS_OWNER,
-                   secret_owner: str = settings.CONTRACT_NFT_SECRET_OWNER):
+    def start_sale(self, address_owner: str = "",
+                   secret_owner: str = ""):
         web3 = Web3(Web3.HTTPProvider(self.bsc))
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = {}
@@ -128,8 +128,8 @@ class ContractNft(ABC):  # pylint: disable=R0904
         web3 = Web3(Web3.HTTPProvider(self.bsc))
         return web3
 
-    def pause(self, address_owner: str = settings.CONTRACT_NFT_ADDRESS_OWNER,
-              secret_owner: str = settings.CONTRACT_NFT_SECRET_OWNER, pause_status: bool = True):
+    def pause(self, address_owner: str = "",
+              secret_owner: str = "", pause_status: bool = True):
         web3 = Web3(Web3.HTTPProvider(self.bsc))
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = {}
@@ -201,8 +201,8 @@ class ContractNft(ABC):  # pylint: disable=R0904
             print(err)
         return response
 
-    def withdraw_all(self, address_owner: str = settings.CONTRACT_NFT_ADDRESS_OWNER,
-                     secret_owner: str = settings.CONTRACT_NFT_SECRET_OWNER):
+    def withdraw_all(self, address_owner: str = "",
+                     secret_owner: str = ""):
         web3 = Web3(Web3.HTTPProvider(self.bsc))
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = {}
@@ -224,8 +224,8 @@ class ContractNft(ABC):  # pylint: disable=R0904
             print(err)
         return response
 
-    def update_base_extension(self, prefix: str = '', address_owner: str = settings.CONTRACT_NFT_ADDRESS_OWNER,
-                              secret_owner: str = settings.CONTRACT_NFT_SECRET_OWNER):
+    def update_base_extension(self, prefix: str = '', address_owner: str = "",
+                              secret_owner: str = ""):
         web3 = Web3(Web3.HTTPProvider(self.bsc))
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = {}
@@ -247,8 +247,8 @@ class ContractNft(ABC):  # pylint: disable=R0904
             print(err)
         return response
 
-    def update_max_mint_ammount(self, max_mint: int = 1000, address_owner: str = settings.CONTRACT_NFT_ADDRESS_OWNER,
-                                secret_owner: str = settings.CONTRACT_NFT_SECRET_OWNER):
+    def update_max_mint_ammount(self, max_mint: int = 1000, address_owner: str = "",
+                                secret_owner: str = ""):
         web3 = Web3(Web3.HTTPProvider(self.bsc))
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = {}
@@ -270,8 +270,8 @@ class ContractNft(ABC):  # pylint: disable=R0904
             print(err)
         return response
 
-    def burn(self, token_id: int, address_owner: str = settings.CONTRACT_NFT_ADDRESS_OWNER,
-             secret_owner: str = settings.CONTRACT_NFT_SECRET_OWNER):
+    def burn(self, token_id: int, address_owner: str = "",
+             secret_owner: str = ""):
         web3 = Web3(Web3.HTTPProvider(self.bsc))
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = []
@@ -293,8 +293,8 @@ class ContractNft(ABC):  # pylint: disable=R0904
             print(err)
         return response
 
-    def update_token_price(self, new_value: float, address_owner: str = settings.CONTRACT_NFT_ADDRESS_OWNER,
-                           secret_owner: str = settings.CONTRACT_NFT_SECRET_OWNER):
+    def update_token_price(self, new_value: float, address_owner: str = "",
+                           secret_owner: str = ""):
         web3 = Web3(Web3.HTTPProvider(self.bsc))
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = []
@@ -316,8 +316,8 @@ class ContractNft(ABC):  # pylint: disable=R0904
             print(err)
         return response
 
-    def transfer_contract(self, new_owner: str, address_owner: str = settings.CONTRACT_NFT_ADDRESS_OWNER,
-                          secret_owner: str = settings.CONTRACT_NFT_SECRET_OWNER):
+    def transfer_contract(self, new_owner: str, address_owner: str = "",
+                          secret_owner: str = ""):
         web3 = Web3(Web3.HTTPProvider(self.bsc))
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = []
@@ -373,8 +373,8 @@ class ContractNft(ABC):  # pylint: disable=R0904
             print(err)
         return response
 
-    def add_white_list(self, address: [str], address_owner: str = settings.CONTRACT_NFT_ADDRESS_OWNER,
-                       secret_owner: str = settings.CONTRACT_NFT_SECRET_OWNER):
+    def add_white_list(self, address: [str], address_owner: str = "",
+                       secret_owner: str = ""):
         web3 = Web3(Web3.HTTPProvider(self.bsc))
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = {}
