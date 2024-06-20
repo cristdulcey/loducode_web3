@@ -46,7 +46,7 @@ class ContractNft(ABC):  # pylint: disable=R0904
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = {}
         try:
-            mints = _contract.functions.mint(address, count).buildTransaction({
+            mints = _contract.functions.mint(address, count).build_transaction({
                 'chainId': self.chain_id,
                 'gas': gas,
                 'gasPrice': web3.eth.gas_price,
@@ -71,7 +71,7 @@ class ContractNft(ABC):  # pylint: disable=R0904
         response = {}
         try:
             if start:
-                pre_sale_func = _contract.functions.startPresale().buildTransaction({
+                pre_sale_func = _contract.functions.startPresale().build_transaction({
                     'chainId': self.chain_id,
                     'gas': 1728712,
                     'gasPrice': web3.eth.gas_price,
@@ -79,7 +79,7 @@ class ContractNft(ABC):  # pylint: disable=R0904
                     'nonce': web3.eth.get_transaction_count(address_owner)
                 })
             else:
-                pre_sale_func = _contract.functions.stopPresale().buildTransaction({
+                pre_sale_func = _contract.functions.stopPresale().build_transaction({
                     'chainId': self.chain_id,
                     'gas': 1728712,
                     'gasPrice': web3.eth.gas_price,
@@ -102,7 +102,7 @@ class ContractNft(ABC):  # pylint: disable=R0904
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = {}
         try:
-            pre_sale_func = _contract.functions.startSale().buildTransaction({
+            pre_sale_func = _contract.functions.startSale().build_transaction({
                 'chainId': self.chain_id,
                 'gas': 1728712,
                 'gasPrice': web3.eth.gas_price,
@@ -134,7 +134,7 @@ class ContractNft(ABC):  # pylint: disable=R0904
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = {}
         try:
-            pre_sale_func = _contract.functions.pause(pause_status).buildTransaction({
+            pre_sale_func = _contract.functions.pause(pause_status).build_transaction({
                 'chainId': self.chain_id,
                 'gas': 1728712,
                 'gasPrice': web3.eth.gas_price,
@@ -207,7 +207,7 @@ class ContractNft(ABC):  # pylint: disable=R0904
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = {}
         try:
-            mints = _contract.functions.withdrawAll().buildTransaction({
+            mints = _contract.functions.withdrawAll().build_transaction({
                 'chainId': self.chain_id,
                 'gas': 1728712,
                 'gasPrice': web3.eth.gas_price,
@@ -230,7 +230,7 @@ class ContractNft(ABC):  # pylint: disable=R0904
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = {}
         try:
-            mints = _contract.functions.updateBaseExtension(prefix).buildTransaction({
+            mints = _contract.functions.updateBaseExtension(prefix).build_transaction({
                 'chainId': self.chain_id,
                 'gas': 1728712,
                 'gasPrice': web3.eth.gas_price,
@@ -253,7 +253,7 @@ class ContractNft(ABC):  # pylint: disable=R0904
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = {}
         try:
-            mints = _contract.functions.updateMaxMintAmount(max_mint).buildTransaction({
+            mints = _contract.functions.updateMaxMintAmount(max_mint).build_transaction({
                 'chainId': self.chain_id,
                 'gas': 1728712,
                 'gasPrice': web3.eth.gas_price,
@@ -276,7 +276,7 @@ class ContractNft(ABC):  # pylint: disable=R0904
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = []
         try:
-            response = _contract.functions.burn(token_id).buildTransaction({
+            response = _contract.functions.burn(token_id).build_transaction({
                 'chainId': self.chain_id,
                 'gas': 1728712,
                 'gasPrice': web3.eth.gas_price,
@@ -299,7 +299,7 @@ class ContractNft(ABC):  # pylint: disable=R0904
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = []
         try:
-            response = _contract.functions.updateTokenPrice(new_value).buildTransaction({
+            response = _contract.functions.updateTokenPrice(new_value).build_transaction({
                 'chainId': self.chain_id,
                 'gas': 1728712,
                 'gasPrice': web3.eth.gas_price,
@@ -322,7 +322,7 @@ class ContractNft(ABC):  # pylint: disable=R0904
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = []
         try:
-            response = _contract.functions.transferOwnership(new_owner).buildTransaction({
+            response = _contract.functions.transferOwnership(new_owner).build_transaction({
                 'chainId': self.chain_id,
                 'gas': 1728712,
                 'gasPrice': web3.eth.gas_price,
@@ -382,7 +382,7 @@ class ContractNft(ABC):  # pylint: disable=R0904
         for ad in address:
             list_address.append(web3.toChecksumAddress(ad))
         try:
-            mints = _contract.functions.addToPresaleWhiteList(list_address).buildTransaction({
+            mints = _contract.functions.addToPresaleWhiteList(list_address).build_transaction({
                 'chainId': self.chain_id,
                 'gas': 1728712,
                 'gasPrice': web3.eth.gas_price,
