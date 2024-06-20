@@ -2,7 +2,7 @@ import os
 from datetime import date
 
 from django.db import models
-from django.contrib.postgres.fields import JSONField
+from django.db.models import JSONField
 from django.utils.translation import gettext as _
 from loducode_utils.models import Audit
 
@@ -25,8 +25,8 @@ class Nft(Audit):
     )
     attributes: dict = JSONField(verbose_name=_('Attributes'), null=True, blank=True, default=dict)
     cost: float = models.FloatField(verbose_name=_('Cost'), default=0.0)
-    date_publication: date = models.DateField(verbose_name=_('date_publication'),)
-    date_created: date = models.DateField(verbose_name=_('date_created'),auto_now=True)
+    date_publication: date = models.DateField(verbose_name=_('date_publication'), blank=True, null=True)
+    date_created: date = models.DateField(verbose_name=_('date_created'), auto_now=True)
 
     objects = NftManager()
 

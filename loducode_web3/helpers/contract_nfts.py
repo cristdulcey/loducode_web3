@@ -40,18 +40,18 @@ class ContractNft(ABC):  # pylint: disable=R0904
             print(err)
         return id_token
 
-    def mint(self, address: str, address_owner: str = settings.CONTRACT_NFT_ADDRESS_OWNER,
-             secret_owner: str = settings.CONTRACT_NFT_SECRET_OWNER):
+    def mint(self, address: str, count: int = 1, address_owner: str = settings.CONTRACT_NFT_ADDRESS_OWNER,
+             secret_owner: str = settings.CONTRACT_NFT_SECRET_OWNER, gas: int = 1728712, value: str = "0.0025"):
         web3 = Web3(Web3.HTTPProvider(self.bsc))
         _contract = web3.eth.contract(address=self.address_contract, abi=self.abi)
         response = {}
         try:
-            mints = _contract.functions.mint(address, 1).buildTransaction({
+            mints = _contract.functions.mint(address, count).buildTransaction({
                 'chainId': self.chain_id,
-                'gas': 1728712,
+                'gas': gas,
                 'gasPrice': web3.eth.gas_price,
                 'from': address_owner,
-                'value': web3.toWei("0.0025", "ether"),
+                'value': web3.toWei(value, "ether"),
                 'nonce': web3.eth.get_transaction_count(address_owner)
             })
             signed_txn = web3.eth.account.sign_transaction(
