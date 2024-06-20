@@ -7,11 +7,11 @@ from web3 import Web3
 
 class ContractNft(ABC):  # pylint: disable=R0904
 
-    def __init__(self, bsc: str = "", abi: str = json.loads({}),
+    def __init__(self, bsc: str = "", abi: str = "",
                  address_contract: str = "",
                  chain_id: int = 0):
         self.bsc = bsc
-        self.abi = abi
+        self.abi = json.loads(abi)
         self.address_contract = address_contract
         self.chain_id = chain_id
 
